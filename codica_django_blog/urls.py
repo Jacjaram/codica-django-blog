@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from codica_django_blog import views
+
 
 urlpatterns = [
+    path('', views.index),
+    path('about/', views.about),  # esta es la nueva ruta
     path('admin/', admin.site.urls),
 ]
